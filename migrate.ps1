@@ -15,6 +15,8 @@ Invoke-WebRequest -Uri 'https://github.com/Microsoft/sql-server-samples/releases
 # Restoring AdventureWorksLT2016.bak into AdventureWorksLT2016
 Restore-DbaDatabase -SqlInstance 'WIN2016' -Path 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\AdventureWorksLT2016.bak' -WithReplace
 
+Invoke-DbaQuery -SqlInstance "WIN2016" -Database "AdventureWorksLT2016" -File ".\updateadv.sql"
+
 # Creating empty AdventureWorksLT2016Copy
 New-DbaDatabase -SqlInstance "WIN2016" -Name "AdventureWorksLT2016Copy"
 
