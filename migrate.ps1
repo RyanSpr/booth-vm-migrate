@@ -23,5 +23,5 @@ New-DbaDatabase -SqlInstance "WIN2016" -Name "AdventureWorksLT2016Copy"
 # Running schema creation script against AdventureWorksLT2016Copy
 Invoke-DbaQuery -SqlInstance "WIN2016" -Database "AdventureWorksLT2016Copy" -File ".\makeadvcopy.sql"
 
-git clone  C:\Users\redgate\Desktop\Generate
+git clone https://github.com/RyanSpr/rggenerate-demo.git C:\Users\redgate\Desktop\Generate
 
